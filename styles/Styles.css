@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section:first-of-type {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background: #282A35;
+}
+
+section:first-of-type section:first-child{
+    position: absolute;
+    height: 2rem;
+    width: 4rem;
+    background-color: #2F59A4;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+
+section:first-of-type section:nth-child(2){
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-left: 13rem solid transparent;
+    border-right: 20rem solid transparent;
+    border-bottom: 15rem solid white;
+    bottom: 0;
+    left: 0;
+}
