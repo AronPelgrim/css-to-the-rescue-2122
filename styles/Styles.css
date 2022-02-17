@@ -4,54 +4,127 @@
     box-sizing: border-box;
 }
 
-section:first-of-type {
+main {
     position: relative;
     height: 100vh;
     overflow: hidden;
     background: #282A35;
 }
 
-section:first-of-type section:first-child{
-    position: absolute;
-    height: 0;
-    width: 0;
-    border-left: 13rem solid transparent;
-    border-right: 20rem solid transparent;
-    border-bottom: 15rem solid white;
-    bottom: 0;
-    left: 0;
+main ul li{
+    list-style-type: none;
 }
 
-section:first-of-type section:nth-child(2){
+main ul li:nth-child(1){
+    position:fixed;
+	width:100%;
+	height:100%;
+	background-color:none;
+	
+	background-image:
+		conic-gradient(
+			at 40% top,
+			transparent 124deg,
+			green 124deg 225deg,
+			transparent 225deg
+		),
+		conic-gradient(
+			at 40% top,
+			transparent 124deg,
+			green 124deg 225deg,
+			transparent 225deg
+		);
+	
+	background-size:
+		30em 12em, 
+		40em 16em;
+	
+	background-repeat:no-repeat;
+	
+	animation:achtergrond 20s linear infinite;
+}
+
+main ul li:nth-child(2){
     position: absolute;
     height: 0;
     width: 0;
-    border-left: 20rem solid transparent;
-    border-right: 13rem solid transparent;
-    border-bottom: 12rem solid rgb(211, 204, 204);
+    border-left: 20em solid transparent;
+    border-right: 13em solid transparent;
+    border-bottom: 12em solid #bbb;
     bottom: 0;
-    left: 25rem;
+    left: 25em;
     z-index: 1;
 }
 
-section:first-of-type section:nth-child(3){
+main ul li:nth-child(3){
     position: absolute;
     height: 0;
     width: 0;
-    border-left: 20rem solid transparent;
-    border-right: 13rem solid transparent;
-    border-bottom: 12rem solid white;
+    border-left: 20em solid transparent;
+    border-right: 13em solid transparent;
+    border-bottom: 12em solid white;
     bottom: 0;
-    left: 45rem;
+    left: 45em;
 }
 
-section:first-of-type section:nth-child(4){
+main ul li:nth-child(4){
     position: absolute;
     height: 0;
     width: 0;
-    border-left: 22rem solid transparent;
-    border-right: 10rem solid transparent;
-    border-bottom: 16rem solid rgb(189, 189, 189);
+    border-left: 22em solid transparent;
+    border-right: 10em solid transparent;
+    border-bottom: 16em solid #bbb;
     bottom: 0;
     right: 0;
+}
+
+main section:nth-of-type(1){
+    height: 5em;
+    width: 5em;
+    background-color: #bbb;
+    border-radius: 50%;
+    position: absolute;
+    right: 5em;
+    top: 5em;
+}
+
+@keyframes firework {
+    0% {
+        top: 100em;
+   }
+    80% {
+        transform: scale(1);
+        opacity: 1;
+        background: #bbb;
+   }
+    100% {
+        transform: scale(25);
+        opacity: 0;
+        background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+        linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+        linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);  
+        background-position: -20px 0, 10px 0, -5px 0, 0 0; 
+    }
+}
+
+@keyframes firework2 {
+    0% {
+        transform: scale(1);
+   }
+    100% {
+        transform: scale(2);
+    }
+}
+
+@keyframes achtergrond {
+	0%{
+		background-position: 
+			100vh bottom,
+			120vh bottom;
+	}
+	100%{
+		background-position: 
+			calc(0vh - 30em) bottom,
+			calc(-20vh - 40em) bottom;
+	}
 }
