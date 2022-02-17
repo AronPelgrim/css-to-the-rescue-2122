@@ -13,16 +13,6 @@ section:first-of-type {
 
 section:first-of-type section:first-child{
     position: absolute;
-    height: 2rem;
-    width: 4rem;
-    background-color: #2F59A4;
-    bottom: 0;
-    left: 0;
-    z-index: 2;
-}
-
-section:first-of-type section:nth-child(2){
-    position: absolute;
     height: 0;
     width: 0;
     border-left: 13rem solid transparent;
@@ -30,4 +20,38 @@ section:first-of-type section:nth-child(2){
     border-bottom: 15rem solid white;
     bottom: 0;
     left: 0;
+}
+
+section:first-of-type section:nth-child(2){
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-left: 20rem solid transparent;
+    border-right: 13rem solid transparent;
+    border-bottom: 12rem solid rgb(211, 204, 204);
+    bottom: 0;
+    left: 25rem;
+    z-index: 1;
+}
+
+section:first-of-type section:nth-child(3){
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-left: 20rem solid transparent;
+    border-right: 13rem solid transparent;
+    border-bottom: 12rem solid white;
+    bottom: 0;
+    left: 45rem;
+}
+
+section:first-of-type section:nth-child(4){
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-left: 22rem solid transparent;
+    border-right: 10rem solid transparent;
+    border-bottom: 16rem solid rgb(189, 189, 189);
+    bottom: 0;
+    right: 0;
 }
