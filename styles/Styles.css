@@ -30,7 +30,7 @@ main ul li:nth-child(1){
 	background-size:
 		65em 25em;
 	background-repeat:no-repeat;
-	animation:achtergrond 20s linear infinite alternate;
+	animation:achtergrond 25s linear infinite reverse;
 }
 
 main ul li:nth-child(2){
@@ -48,7 +48,7 @@ main ul li:nth-child(2){
 	background-size:
 		50em 17em;
 	background-repeat:no-repeat;
-	animation:achtergrond2 20s linear infinite alternate;
+	animation:achtergrond2 25s linear infinite reverse;
 }
 
 main ul li:nth-child(3){
@@ -66,68 +66,61 @@ main ul li:nth-child(3){
 	background-size:
 		30em 10em;
 	background-repeat:no-repeat;
-	animation:achtergrond3 20s linear infinite alternate;
+	animation:achtergrond3 25s linear infinite reverse;
 }
 
 main section:nth-of-type(1){
-    height: 5em;
-    width: 5em;
-    background-color: #bbb;
-    border-radius: 50%;
     position: absolute;
-    right: 5em;
-    top: 5em;
-	animation:achtergrond3 20s linear infinite alternate;
+	width: 18em;
+	height: 7em;
+	background-color:yellow;
+	top: 15em;
+	left: calc(50% - 9em);
+	border-radius: 70% 70% 60% 60% / 70% 70%;
+}
+
+main section:nth-of-type(1)::before { 
+	position: absolute;
+	content: ""; 
+	background-color: red;
+	height: 7em;
+	width: 2em;
+	left: 0;
+	border-radius: 70% 70% 60% 60% / 70% 70%;
 }
 
 @keyframes firework {
-    0% {
-        top: 100em;
-   }
-    80% {
-        transform: scale(1);
-        opacity: 1;
-        background: #bbb;
-   }
-    100% {
-        transform: scale(25);
-        opacity: 0;
-        background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
-        linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
-        linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);  
-        background-position: -20px 0, 10px 0, -5px 0, 0 0; 
-    }
+    0%{
+		background-position: 120vh bottom;
+	}
+	100%{
+		background-position: calc(10vh - 40em) bottom;
+	}
 }
 
 @keyframes achtergrond {
     0%{
-		background-position: 
-			120vh bottom;
+		background-position: 120vh bottom;
 	}
 	100%{
-		background-position: 
-		calc(10vh - 40em) bottom;
+		background-position: calc(10vh - 40em) bottom;
 	}
 }
 
 @keyframes achtergrond2 {
     0%{
-		background-position: 
-			100vh bottom;
+		background-position: 100vh bottom;
 	}
 	100%{
-		background-position: 
-			calc(20vh - 30em) bottom;
+		background-position: calc(20vh - 30em) bottom;
 	}
 }
 
 @keyframes achtergrond3 {
     0%{
-		background-position: 
-			90vh bottom;
+		background-position: 90vh bottom;
 	}
 	100%{
-		background-position: 
-			calc(40vh - 30em) bottom;
+		background-position: calc(40vh - 30em) bottom;
 	}
 }
