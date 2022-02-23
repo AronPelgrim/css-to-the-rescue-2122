@@ -10,4 +10,4 @@ border-left: 5em solid transparent;
 border-right: 5em solid transparent;
 border-bottom: 5em solid black;
 ``` 
-You can create triangles like this, but it will be hard to make them move. That's when I found out that you can also create triangles with a conic-gradient. This in combination with keyframes, made it possible to make my background move.
+You can create triangles like this, but it will be hard to make them move. That's when I found out that you can also create triangles with a conic-gradient. This in combination with keyframes, made it possible to make my background move. The next step was to create the firework and make it interactive.
