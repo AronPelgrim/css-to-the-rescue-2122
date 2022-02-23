@@ -74,9 +74,10 @@ main section:nth-of-type(1){
 	width: 18em;
 	height: 7em;
 	background-color:yellow;
-	top: 15em;
+	top: 25vh;
 	left: calc(50% - 9em);
 	border-radius: 70% 70% 60% 60% / 70% 70%;
+	animation: firework 1.5s ease-in-out infinite alternate;
 }
 
 main section:nth-of-type(1)::before { 
@@ -91,10 +92,13 @@ main section:nth-of-type(1)::before {
 
 @keyframes firework {
     0%{
-		background-position: 120vh bottom;
+		transform: rotate(10deg);
+	}
+	50% {
+		transform: rotate(-10deg) translatey(10em);
 	}
 	100%{
-		background-position: calc(10vh - 40em) bottom;
+		transform: rotate(10deg);
 	}
 }
 
