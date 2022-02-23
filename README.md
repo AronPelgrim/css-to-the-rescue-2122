@@ -4,3 +4,10 @@ The course CSS to the Rescue is about learning to create innovative, experimenta
 
 ## Process
 ### Week 1
+The first week went slow, but steady. My idea was to create a moving background with mountains, where the firework would move past. I created the mountains with the code below.
+```   
+border-left: 5em solid transparent;
+border-right: 5em solid transparent;
+border-bottom: 5em solid black;
+``` 
+You can create triangles like this, but it will be hard to make them move. That's when I found out that you can also create triangles with a conic-gradient. This in combination with keyframes, made it possible to make my background move.
