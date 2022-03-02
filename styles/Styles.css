@@ -67,7 +67,7 @@ main section:nth-of-type(1)::before {
 }
 main ul:nth-of-type(2) li {
 	visibility: hidden;
-	animation: explosion 10s 1 9s ease-in-out;
+	animation: explosion 3s 1 8.75s ease-in-out;
 }
 main ul:nth-of-type(2) li:nth-of-type(1) {
 	width: 5em;
