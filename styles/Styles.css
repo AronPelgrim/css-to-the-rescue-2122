@@ -49,21 +49,30 @@ main section:nth-of-type(1) {
 	position: absolute;
 	width: 18em;
 	height: 7em;
-	background-color: yellow;
+	background-color: grey;
 	top: 25vh;
 	left: calc(50% - 9em);
-	border-radius: 70% 70% 60% 60% / 70% 70%;
+	border-radius: 0% 70% 60% 0% / 70% 70%;
 	animation: firework 10s 1 ease-in-out;
 	visibility: hidden;
 }
 main section:nth-of-type(1)::before {
 	position: absolute;
 	content: "";
-	background-color: red;
+	background-color: white;
 	height: 7em;
 	width: 2em;
 	left: 0;
-	border-radius: 70% 70% 60% 60% / 70% 70%;
+}
+main section:nth-of-type(1)::after {
+	position: absolute;
+	content: "";
+	background-color: orange;
+	height: 7em;
+	width: 7em;
+	left: -7em;
+	border-radius: 82% 18% 55% 45% / 100% 0% 100% 0% ;
+	transform: rotate(270deg);
 }
 main ul:nth-of-type(2) li {
 	visibility: hidden;
