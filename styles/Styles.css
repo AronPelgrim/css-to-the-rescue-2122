@@ -98,7 +98,7 @@ main > section:nth-of-type(1) ul li:nth-of-type(4){
 }
 main > ul:nth-of-type(2) li {
 	visibility: hidden;
-	animation: explosion 3s 1 8.75s ease-in-out;
+	animation: explosion 4s 1 8.75s ease-in-out;
 }
 main > ul:nth-of-type(2) li:nth-of-type(1) {
 	width: 5em;
@@ -192,7 +192,7 @@ main > ul:nth-of-type(2) li:nth-of-type(7) {
 	80% {
 		transform: translatey(0);
 	}
-	93% {
+	92% {
 		transform: rotate(180deg) translatey(-100vh);
 	}
 	100% {
@@ -229,8 +229,11 @@ main > ul:nth-of-type(2) li:nth-of-type(7) {
 		transform: 0;
 		visibility: visible;
 	}
+	85% {
+		transform:scale(20);
+	}
 	100% {
-		transform:scale(100);
+		transform:scale(0);
 	}
 }
 @keyframes fireEngine {
