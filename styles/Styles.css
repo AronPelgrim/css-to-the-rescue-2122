@@ -12,7 +12,7 @@ main {
 main ul li {
 	list-style-type: none;
 }
-main ul:first-of-type li:nth-of-type(1) {
+main > ul:first-of-type li:nth-of-type(1) {
 	position: fixed;
 	width: 100%;
 	height: 100%;
@@ -23,7 +23,7 @@ main ul:first-of-type li:nth-of-type(1) {
 	animation: achtergrond 8s linear 1;
 	background-position: calc(120vh - 30em) bottom;
 }
-main ul:first-of-type li:nth-of-type(2) {
+main > ul:first-of-type li:nth-of-type(2) {
 	position: fixed;
 	width: 100%;
 	height: 100%;
@@ -34,7 +34,7 @@ main ul:first-of-type li:nth-of-type(2) {
 	animation: achtergrond2 8s linear 1;
 	background-position: calc(100vh - 30em) bottom;
 }
-main ul:first-of-type li:nth-of-type(3) {
+main > ul:first-of-type li:nth-of-type(3) {
 	position: fixed;
 	width: 100%;
 	height: 100%;
@@ -45,7 +45,7 @@ main ul:first-of-type li:nth-of-type(3) {
 	animation: achtergrond3 8s linear 1;
 	background-position: calc(90vh - 40em) bottom;
 }
-main section:nth-of-type(1) {
+main > section:nth-of-type(1) {
 	position: absolute;
 	width: 18em;
 	height: 7em;
@@ -56,7 +56,7 @@ main section:nth-of-type(1) {
 	animation: firework 10s 1 ease-in-out;
 	visibility: hidden;
 }
-main section:nth-of-type(1)::before {
+main > section:nth-of-type(1)::before {
 	position: absolute;
 	content: "";
 	background-color: white;
@@ -64,21 +64,43 @@ main section:nth-of-type(1)::before {
 	width: 2em;
 	left: 0;
 }
-main section:nth-of-type(1)::after {
+main > section:nth-of-type(1) ul{
+	position: relative;
+	transform: rotate(220deg);
+	transform-origin: 4em;
+	animation: fireEngine .15s ease-in infinite;
+}
+main > section:nth-of-type(1) ul li{
 	position: absolute;
-	content: "";
-	background-color: orange;
+	bottom: 4em;
+	left: 4em;
+	border-radius: 50% 0 50% 0;
+}
+main > section:nth-of-type(1) ul li:nth-of-type(1){
 	height: 7em;
 	width: 7em;
-	left: -7em;
-	border-radius: 82% 18% 55% 45% / 100% 0% 100% 0% ;
-	transform: rotate(270deg);
+	background-color: orangered;
 }
-main ul:nth-of-type(2) li {
+main > section:nth-of-type(1) ul li:nth-of-type(2){
+	height: 6em;
+	width: 6em;
+	background-color: orange;
+}
+main > section:nth-of-type(1) ul li:nth-of-type(3){
+	height: 5em;
+	width: 5em;
+	background-color: gold;
+}
+main > section:nth-of-type(1) ul li:nth-of-type(4){
+	height: 4em;
+	width: 4em;
+	background-color: lightyellow;
+}
+main > ul:nth-of-type(2) li {
 	visibility: hidden;
 	animation: explosion 3s 1 8.75s ease-in-out;
 }
-main ul:nth-of-type(2) li:nth-of-type(1) {
+main > ul:nth-of-type(2) li:nth-of-type(1) {
 	width: 5em;
 	height: 5em;
 	background-color: rgba(255, 78, 157, 0.5);
@@ -87,7 +109,7 @@ main ul:nth-of-type(2) li:nth-of-type(1) {
 	left: calc(50% - 2.5em);
 	bottom: -5em;
 }
-main ul:nth-of-type(2) li:nth-of-type(2) {
+main > ul:nth-of-type(2) li:nth-of-type(2) {
 	width: 5em;
 	height: 5em;
 	background-color: rgba(195, 222, 66, 0.5);
@@ -96,7 +118,7 @@ main ul:nth-of-type(2) li:nth-of-type(2) {
 	left: calc(45% - 2.5em);
 	bottom: -8em;
 }
-main ul:nth-of-type(2) li:nth-of-type(3) {
+main > ul:nth-of-type(2) li:nth-of-type(3) {
 	width: 5em;
 	height: 5em;
 	background-color: rgba(255, 160, 55, 0.5);
@@ -105,7 +127,7 @@ main ul:nth-of-type(2) li:nth-of-type(3) {
 	left: calc(55% - 2.5em);
 	bottom: -8em;
 }
-main ul:nth-of-type(2) li:nth-of-type(4) {
+main > ul:nth-of-type(2) li:nth-of-type(4) {
 	width: 5em;
 	height: 5em;
 	background-color: rgba(0, 152, 163, 0.79);
@@ -114,7 +136,7 @@ main ul:nth-of-type(2) li:nth-of-type(4) {
 	left: calc(50% - 2.5em);
 	bottom: -11em;
 }
-main ul:nth-of-type(2) li:nth-of-type(5) {
+main > ul:nth-of-type(2) li:nth-of-type(5) {
 	width: 5em;
 	height: 5em;
 	background-color: rgba(255, 255, 163, 0.79);
@@ -123,7 +145,7 @@ main ul:nth-of-type(2) li:nth-of-type(5) {
 	left: calc(40% - 2.5em);
 	bottom: -11em;
 }
-main ul:nth-of-type(2) li:nth-of-type(6) {
+main > ul:nth-of-type(2) li:nth-of-type(6) {
 	width: 5em;
 	height: 5em;
 	background-color: rgba(255, 0, 163, 0.79);
@@ -132,7 +154,7 @@ main ul:nth-of-type(2) li:nth-of-type(6) {
 	left: calc(60% - 2.5em);
 	bottom: -11em;
 }
-main ul:nth-of-type(2) li:nth-of-type(7) {
+main > ul:nth-of-type(2) li:nth-of-type(7) {
 	width: 5em;
 	height: 5em;
 	background-color: rgba(255, 135, 0, 0.5);
@@ -210,4 +232,24 @@ main ul:nth-of-type(2) li:nth-of-type(7) {
 	100% {
 		transform:scale(100);
 	}
-}	
+}
+@keyframes fireEngine {
+	0% {
+		transform: rotate(219deg);
+	}
+	20% {
+		transform: rotate(222deg) scaleY(1.05);
+	}
+	40% {
+		transform: rotate(219deg);
+	}
+	40% {
+		transform: rotate(221deg);
+	}
+	80% {
+		transform: rotate(218deg) scaleY(0.90);
+	}
+	100% {
+		transform: rotate(221deg);
+	}
+}
