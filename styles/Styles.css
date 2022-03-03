@@ -111,7 +111,7 @@ main > ul:nth-of-type(2) li:nth-of-type(1) {
 	position: absolute;
 	left: calc(50% - 2.5em);
 	bottom: -5em;
-	animation: explosion 6s 1 8.75s ease-in-out;
+	animation: explosion 2s 8.75s ease-in-out;
 }
 main > ul:nth-of-type(2) li:nth-of-type(2) {
 	width: 5em;
@@ -121,7 +121,7 @@ main > ul:nth-of-type(2) li:nth-of-type(2) {
 	position: absolute;
 	left: calc(45% - 2.5em);
 	bottom: -8em;
-	animation: explosion 7s 1 8.80s ease-in-out;
+	animation: explosion 2s 1 8.80s ease-in-out;
 }
 main > ul:nth-of-type(2) li:nth-of-type(3) {
 	width: 5em;
@@ -131,7 +131,7 @@ main > ul:nth-of-type(2) li:nth-of-type(3) {
 	position: absolute;
 	left: calc(55% - 2.5em);
 	bottom: -8em;
-	animation: explosion 6s 1 8.85s ease-in-out;
+	animation: explosion 2s 1 8.85s ease-in-out;
 }
 main > ul:nth-of-type(2) li:nth-of-type(4) {
 	width: 5em;
@@ -141,7 +141,7 @@ main > ul:nth-of-type(2) li:nth-of-type(4) {
 	position: absolute;
 	left: calc(50% - 2.5em);
 	bottom: -11em;
-	animation: explosion 7s 1 8.9s ease-in-out;
+	animation: explosion 2s 1 8.9s ease-in-out;
 }
 main > ul:nth-of-type(2) li:nth-of-type(5) {
 	width: 5em;
@@ -151,7 +151,7 @@ main > ul:nth-of-type(2) li:nth-of-type(5) {
 	position: absolute;
 	left: calc(40% - 2.5em);
 	bottom: -11em;
-	animation: explosion 6s 1 8.95s ease-in-out;
+	animation: explosion 2s 1 8.95s ease-in-out;
 }
 main > ul:nth-of-type(2) li:nth-of-type(6) {
 	width: 5em;
@@ -161,7 +161,7 @@ main > ul:nth-of-type(2) li:nth-of-type(6) {
 	position: absolute;
 	left: calc(60% - 2.5em);
 	bottom: -11em;
-	animation: explosion 7s 1 9s ease-in-out;
+	animation: explosion 2s 1 9s ease-in-out;
 }
 main > ul:nth-of-type(2) li:nth-of-type(7) {
 	width: 5em;
@@ -237,14 +237,14 @@ main > ul:nth-of-type(2) li:nth-of-type(7) {
 	0% {
 		transform: 0;
 		visibility: visible;
-		filter: hue-rotate(10000deg) blur(.5em);
 	}
-	5% {
-		transform:scale(22);
-		filter: hue-rotate(0) blur(.5em);		
+	30% {
+		transform:scale(50);	
+		filter: hue-rotate(10000000000000000000000000000000000deg) blur(.2em);	
 	}
 	100% {
-		transform:scale(0);	
+		transform:scale(50);
+		filter: hue-rotate(0);
 	}
 }
 @keyframes fireEngine {
@@ -269,9 +269,15 @@ main > ul:nth-of-type(2) li:nth-of-type(7) {
 }
 /* @keyframes babyFirework {
 	0% {
-		transform: scalex(5);
+		visibility: visible;
+		transform: scale(.2);
 	}
-	0% {
-		transform: rotate(1deg);
+	90% {
+		transform: scale(.2);
+	}
+	100% {
+		transform: scale(2);
+		visibility: hidden;
+		bottom: 10em;
 	}
 } */
