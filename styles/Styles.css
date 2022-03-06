@@ -109,9 +109,9 @@ main > ul:nth-of-type(2) li:nth-of-type(1) {
 	background-color: rgba(255, 78, 157, 0.4);
 	border-radius: 50%;
 	position: absolute;
-	left: calc(50% - 2.5em);
+	left: calc(35% - 2.5em);
 	bottom: -5em;
-	animation: explosion 2s 8.75s ease-in-out;
+	animation: babyFirework 1.75s 5 ease-in-out;
 }
 main > ul:nth-of-type(2) li:nth-of-type(2) {
 	width: 5em;
@@ -119,9 +119,9 @@ main > ul:nth-of-type(2) li:nth-of-type(2) {
 	background-color: rgba(195, 222, 66, 0.4);
 	border-radius: 50%;
 	position: absolute;
-	left: calc(45% - 2.5em);
+	left: calc(65% - 2.5em);
 	bottom: -8em;
-	animation: explosion 2s 1 8.80s ease-in-out;
+	animation: babyFirework 1.375s 6 .5s ease-in-out;
 }
 main > ul:nth-of-type(2) li:nth-of-type(3) {
 	width: 5em;
@@ -267,17 +267,20 @@ main > ul:nth-of-type(2) li:nth-of-type(7) {
 		transform: rotate(0deg);
 	}
 }
-/* @keyframes babyFirework {
+@keyframes babyFirework {
 	0% {
 		visibility: visible;
 		transform: scale(.2);
 	}
-	90% {
+	85% {
 		transform: scale(.2);
+		filter: hue-rotate(10000000000000000000000000000000000deg);	
 	}
 	100% {
-		transform: scale(2);
+		transform: scale(5);
 		visibility: hidden;
-		bottom: 10em;
+		bottom: 25em;
+		transform: scale(1) rotate3d(1, 1, 0, -360deg);
+		filter: hue-rotate(10000000000000000000000000000000000deg) blur(1.5em);	
 	}
-} */
+}
