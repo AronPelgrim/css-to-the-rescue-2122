@@ -33,3 +33,9 @@ These are images of the final result.
 1. [https://redstapler.co/easy-realistic-css-fire-effect/](https://redstapler.co/easy-realistic-css-fire-effect/)
 
 2. [https://codepen.io/shooft/pen/QWOaMjJ](https://codepen.io/shooft/pen/QWOaMjJ)
+
+3. [https://cssgradient.io/](https://cssgradient.io/)
+
+4. [https://9elements.github.io/fancy-border-radius/](https://9elements.github.io/fancy-border-radius/)
+
+
