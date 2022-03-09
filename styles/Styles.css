@@ -4,20 +4,142 @@
 	box-sizing: border-box;
 }
 :root {
-	--lucht-achtergrond: #282A35;
+	--lucht-achtergrond: #071e2c;
 	--berg-achtergrond1: #ffffff;
 	--berg-achtergrond2: #bbb;
 	--berg-achtergrond3: rgb(172, 161, 161);
 	--raket-kleur: #FF007F;
+	--raket-kleur-achter: #fff;
+	--button-positie: 3vw;
 }
 main {
 	position: relative;
 	height: 100vh;
 	overflow: hidden;
 	background: var(--lucht-achtergrond);
+	font-family: 'Montserrat Alternates', sans-serif;
 }
-main input:checked ~ section, main input:checked ~ ul:first-of-type li, main input:checked ~ section:nth-of-type(1) ul li, main input:checked ~ ul:nth-of-type(2) li {
+main h1 {
+	color: #fff;
+	position: absolute;
+	font-size: 1.5em;
+	top: 2vh;
+	z-index: 100;
+}
+main h1:nth-of-type(1) {
+	left: var(--button-positie);
+}
+main h1:nth-of-type(2) {
+	position: relative;
+	text-align: center;
+}
+main > input[type="checkbox"] {
+	display: none;
+}
+main > input[type="radio"] {
+	display: none;
+}
+main > label section {
+	border: .2em solid #fff;
+	position: absolute;
+	top: 7.5vh;
+	border-radius: 50%;
+	cursor: pointer;
+	z-index: 100;
+	height: 2.5em;
+	width: 2.5em;
+	transition: 1s;
+}
+main > label[for="bom"] section {
+	background: red;
+	left: calc(50% - 1.25em);
+}
+main > label[for="bom"] section:hover {
+	animation: fireEngine .20s ease-in infinite;
+}
+main > label[for="raket-k1"] section {
+	background: #01BF8F;
+	left: calc(var(--button-positie));
+}
+main > label[for="raket-k1"] section:hover {
+	animation: fireEngine .20s ease-in infinite;
+}
+main > label[for="raket-k2"] section {
+	background: #40EEF9;
+	left: calc(var(--button-positie) + 5vw);
+}
+main > label[for="raket-k2"] section:hover {
+	animation: fireEngine .20s ease-in infinite;
+}
+main > label[for="raket-k3"] section {
+	background: #FF5669;
+	left: calc(var(--button-positie) + 10vw);
+}
+main > label[for="raket-k3"] section:hover {
+	animation: fireEngine .20s ease-in infinite;
+}
+main > label[for="raket-k4"] section {
+	background: linear-gradient(90deg, rgba(127,124,179,1) 0%, rgba(246,168,96,1) 26%, rgba(255,135,229,1) 52%, rgba(121,190,128,1) 80%, rgba(0,212,255,1) 100%);
+	left: calc(var(--button-positie));
+	top: 14vh;
+}
+main > label[for="raket-k4"] section:hover {
+	animation: fireEngine .20s ease-in infinite;
+}
+main > label[for="raket-k5"] section {
+	background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(193,228,189,1) 39%, rgba(222,200,180,1) 64%, rgba(208,183,188,1) 83%, rgba(148,187,233,1) 100%);
+	left: calc(var(--button-positie) + 5vw);
+	top: 14vh;
+}
+main > label[for="raket-k5"] section:hover {
+	animation: fireEngine .20s ease-in infinite;
+}
+main > label[for="raket-k6"] section {
+	background: linear-gradient(90deg, rgba(180,58,153,1) 0%, rgba(253,201,29,1) 50%, rgba(205,252,69,1) 100%);;
+	left: calc(var(--button-positie) + 10vw);
+	top: 14vh;
+}
+main > label[for="raket-k6"] section:hover {
+	animation: fireEngine .20s ease-in infinite;
+}
+main input:nth-of-type(1):checked ~ section, main input:nth-of-type(1):checked ~ ul:first-of-type li, main input:nth-of-type(1):checked ~ section:nth-of-type(1) ul li, main input:nth-of-type(1):checked ~ ul:nth-of-type(2) li {
     animation-play-state: running;
+}
+main input:nth-of-type(2):checked ~ label[for="raket-k1"] section {
+    border: .4em solid #fff;
+}
+main input:nth-of-type(3):checked ~ label[for="raket-k2"] section {
+    border: .4em solid #fff;
+}
+main input:nth-of-type(4):checked ~ label[for="raket-k3"] section {
+    border: .4em solid #fff;
+}
+main input:nth-of-type(5):checked ~ label[for="raket-k4"] section {
+    border: .4em solid #fff;
+}
+main input:nth-of-type(6):checked ~ label[for="raket-k5"] section {
+    border: .4em solid #fff;
+}
+main input:nth-of-type(7):checked ~ label[for="raket-k6"] section {
+    border: .4em solid #fff;
+}
+main input:nth-of-type(2):checked ~ section {
+    --raket-kleur: #01BF8F;
+}
+main input:nth-of-type(3):checked ~ section {
+    --raket-kleur: #40EEF9;
+}
+main input:nth-of-type(4):checked ~ section {
+    --raket-kleur: #FF5669;
+}
+main input:nth-of-type(5):checked ~ section {
+    --raket-kleur: linear-gradient(90deg, rgba(127,124,179,1) 0%, rgba(246,168,96,1) 26%, rgba(255,135,229,1) 52%, rgba(121,190,128,1) 80%, rgba(0,212,255,1) 100%);
+}
+main input:nth-of-type(6):checked ~ section {
+    --raket-kleur: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(193,228,189,1) 39%, rgba(222,200,180,1) 64%, rgba(208,183,188,1) 83%, rgba(148,187,233,1) 100%);
+}
+main input:nth-of-type(7):checked ~ section {
+    --raket-kleur: linear-gradient(90deg, rgba(180,58,153,1) 0%, rgba(253,201,29,1) 50%, rgba(205,252,69,1) 100%);
 }
 main ul li {
 	list-style-type: none;
@@ -69,11 +191,12 @@ main > section:nth-of-type(1) {
 	animation: firework 10s 1 ease-in-out;
 	animation-play-state: paused;
 	visibility: hidden;
+	transition: .5s;
 }
 main > section:nth-of-type(1)::before {
 	position: absolute;
 	content: "";
-	background-color: white;
+	background-color: var(--raket-kleur-achter);
 	height: 7em;
 	width: 2em;
 	left: 0;
