@@ -130,6 +130,7 @@ main input:nth-of-type(7):checked ~ section {
 main ul li {
 	list-style-type: none;
 }
+/* Geinspireerd door; https://codepen.io/shooft/pen/QWOaMjJ met dan aan Sanne */
 main > ul:first-of-type li:nth-of-type(1) {
 	position: fixed;
 	width: 100%;
@@ -193,6 +194,7 @@ main > section:nth-of-type(1) ul{
 	transform: rotate(220deg);
 	transform-origin: 4em;
 }
+/* Geinspireerd door; https://redstapler.co/easy-realistic-css-fire-effect/ */
 main > section:nth-of-type(1) ul li{
 	position: absolute;
 	bottom: 4em;
