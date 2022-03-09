@@ -10,7 +10,8 @@
 	--berg-achtergrond3: rgb(172, 161, 161);
 	--raket-kleur: #FF007F;
 	--raket-kleur-achter: #fff;
-	--button-positie: 3vw;
+	--button-positie-left: 3vw;
+	--button-positie-top: 7vh;
 }
 main {
 	position: relative;
@@ -27,7 +28,7 @@ main h1 {
 	z-index: 100;
 }
 main h1:nth-of-type(1) {
-	left: var(--button-positie);
+	left: var(--button-positie-left);
 }
 main h1:nth-of-type(2) {
 	position: relative;
@@ -39,10 +40,10 @@ main > input[type="checkbox"] {
 main > input[type="radio"] {
 	display: none;
 }
-main > label section {
+main > label {
 	border: .2em solid #fff;
 	position: absolute;
-	top: 7.5vh;
+	top: var(--button-positie-top);
 	border-radius: 50%;
 	cursor: pointer;
 	z-index: 100;
@@ -50,77 +51,62 @@ main > label section {
 	width: 2.5em;
 	transition: 1s;
 }
-main > label[for="bom"] section {
+main > label section:hover {
+	animation: fireEngine .20s ease-in infinite;
+}
+main > label[for="bom"] {
 	background: red;
 	left: calc(50% - 1.25em);
 }
-main > label[for="bom"] section:hover {
-	animation: fireEngine .20s ease-in infinite;
-}
-main > label[for="raket-k1"] section {
+main > label[for="raket-k1"] {
 	background: #01BF8F;
-	left: calc(var(--button-positie));
+	left: calc(var(--button-positie-left));
 }
-main > label[for="raket-k1"] section:hover {
-	animation: fireEngine .20s ease-in infinite;
-}
-main > label[for="raket-k2"] section {
+main > label[for="raket-k2"] {
 	background: #40EEF9;
-	left: calc(var(--button-positie) + 5vw);
+	left: calc(var(--button-positie-left) + 5vw);
 }
-main > label[for="raket-k2"] section:hover {
-	animation: fireEngine .20s ease-in infinite;
-}
-main > label[for="raket-k3"] section {
+main > label[for="raket-k3"] {
 	background: #FF5669;
-	left: calc(var(--button-positie) + 10vw);
+	left: calc(var(--button-positie-left) + 10vw);
 }
-main > label[for="raket-k3"] section:hover {
-	animation: fireEngine .20s ease-in infinite;
-}
-main > label[for="raket-k4"] section {
+main > label[for="raket-k4"] {
 	background: linear-gradient(90deg, rgba(127,124,179,1) 0%, rgba(246,168,96,1) 26%, rgba(255,135,229,1) 52%, rgba(121,190,128,1) 80%, rgba(0,212,255,1) 100%);
-	left: calc(var(--button-positie));
-	top: 14vh;
+	left: calc(var(--button-positie-left));
+	top: calc(var(--button-positie-top) + 7vh);
 }
-main > label[for="raket-k4"] section:hover {
-	animation: fireEngine .20s ease-in infinite;
-}
-main > label[for="raket-k5"] section {
+main > label[for="raket-k5"] {
 	background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(193,228,189,1) 39%, rgba(222,200,180,1) 64%, rgba(208,183,188,1) 83%, rgba(148,187,233,1) 100%);
-	left: calc(var(--button-positie) + 5vw);
-	top: 14vh;
+	left: calc(var(--button-positie-left) + 5vw);
+	top: calc(var(--button-positie-top) + 7vh);
 }
-main > label[for="raket-k5"] section:hover {
-	animation: fireEngine .20s ease-in infinite;
-}
-main > label[for="raket-k6"] section {
+main > label[for="raket-k6"] {
 	background: linear-gradient(90deg, rgba(180,58,153,1) 0%, rgba(253,201,29,1) 50%, rgba(205,252,69,1) 100%);;
-	left: calc(var(--button-positie) + 10vw);
-	top: 14vh;
-}
-main > label[for="raket-k6"] section:hover {
-	animation: fireEngine .20s ease-in infinite;
+	left: calc(var(--button-positie-left) + 10vw);
+	top: calc(var(--button-positie-top) + 7vh);
 }
 main input:nth-of-type(1):checked ~ section, main input:nth-of-type(1):checked ~ ul:first-of-type li, main input:nth-of-type(1):checked ~ section:nth-of-type(1) ul li, main input:nth-of-type(1):checked ~ ul:nth-of-type(2) li {
     animation-play-state: running;
 }
-main input:nth-of-type(2):checked ~ label[for="raket-k1"] section {
+main input:nth-of-type(1):checked ~ label[for="bom"] {
     border: .4em solid #fff;
 }
-main input:nth-of-type(3):checked ~ label[for="raket-k2"] section {
+main input:nth-of-type(2):checked ~ label[for="raket-k1"] {
     border: .4em solid #fff;
 }
-main input:nth-of-type(4):checked ~ label[for="raket-k3"] section {
+main input:nth-of-type(3):checked ~ label[for="raket-k2"] {
     border: .4em solid #fff;
 }
-main input:nth-of-type(5):checked ~ label[for="raket-k4"] section {
+main input:nth-of-type(4):checked ~ label[for="raket-k3"] {
     border: .4em solid #fff;
 }
-main input:nth-of-type(6):checked ~ label[for="raket-k5"] section {
+main input:nth-of-type(5):checked ~ label[for="raket-k4"] {
     border: .4em solid #fff;
 }
-main input:nth-of-type(7):checked ~ label[for="raket-k6"] section {
+main input:nth-of-type(6):checked ~ label[for="raket-k5"] {
+    border: .4em solid #fff;
+}
+main input:nth-of-type(7):checked ~ label[for="raket-k6"] {
     border: .4em solid #fff;
 }
 main input:nth-of-type(2):checked ~ section {
@@ -150,11 +136,11 @@ main > ul:first-of-type li:nth-of-type(1) {
 	height: 100%;
 	background-color: none;
 	background-image: conic-gradient( at 40% top, transparent 130deg, var(--berg-achtergrond1) 124deg 225deg, transparent 225deg);
-	background-size: 65em 25em;
+	background-size: 200vw 50vh;
 	background-repeat: no-repeat;
 	animation: achtergrond 10.6s linear 1;
 	animation-play-state: paused;
-	background-position: calc(120vh - 30em) bottom;
+	background-position: -20vw bottom;
 }
 main > ul:first-of-type li:nth-of-type(2) {
 	position: fixed;
@@ -162,11 +148,11 @@ main > ul:first-of-type li:nth-of-type(2) {
 	height: 100%;
 	background-color: none;
 	background-image: conic-gradient( at 40% top, transparent 124deg, var(--berg-achtergrond2) 124deg 225deg, transparent 225deg);
-	background-size: 50em 17em;
+	background-size: 200vw 35vh;
 	background-repeat: no-repeat;
 	animation: achtergrond2 10.6s linear 1;
 	animation-play-state: paused;
-	background-position: calc(100vh - 30em) bottom;
+	background-position: -40vw bottom;
 }
 main > ul:first-of-type li:nth-of-type(3) {
 	position: fixed;
@@ -174,19 +160,19 @@ main > ul:first-of-type li:nth-of-type(3) {
 	height: 100%;
 	background-color: none;
 	background-image: conic-gradient( at 45% top, transparent 135deg, var(--berg-achtergrond3) 124deg 225deg, transparent 225deg);
-	background-size: 30em 10em;
+	background-size: 200vw 20vh;
 	background-repeat: no-repeat;
 	animation: achtergrond3 10.6s linear 1;
 	animation-play-state: paused;
-	background-position: calc(90vh - 40em) bottom;
+	background-position: -70vw bottom;
 }
 main > section:nth-of-type(1) {
 	position: absolute;
-	width: 18em;
-	height: 7em;
+	width: clamp(13rem, 20vw, 18rem); 
+	height: clamp(4rem, 13vh, 35rem);
 	background: var(--raket-kleur);
-	top: 25vh;
-	left: calc(50% - 9em);
+	top: 30vh;
+	left: calc(50% - 11vw);
 	border-radius: 0% 70% 60% 0% / 70% 70%;
 	animation: firework 10s 1 ease-in-out;
 	animation-play-state: paused;
@@ -197,7 +183,7 @@ main > section:nth-of-type(1)::before {
 	position: absolute;
 	content: "";
 	background-color: var(--raket-kleur-achter);
-	height: 7em;
+	height: clamp(4rem, 13vh, 35rem);
 	width: 2em;
 	left: 0;
 	z-index: 20;
@@ -214,28 +200,28 @@ main > section:nth-of-type(1) ul li{
 	border-radius: 50% 0 50% 0;
 }
 main > section:nth-of-type(1) ul li:nth-of-type(1){
-	height: 7em;
+	height: clamp(5rem, 14vh, 35rem);
 	width: 7em;
 	background-color: orangered;
 	animation: fireEngine .15s ease-in infinite;
 	animation-play-state: paused;
 }
 main > section:nth-of-type(1) ul li:nth-of-type(2){
-	height: 6em;
+	height: clamp(4rem, 12vh, 35rem);
 	width: 6em;
 	background-color: orange;
 	animation: fireEngine .20s ease-in infinite;
 	animation-play-state: paused;
 }
 main > section:nth-of-type(1) ul li:nth-of-type(3){
-	height: 5em;
+	height: clamp(3rem, 10vh, 35rem);
 	width: 5em;
 	background-color: gold;
 	animation: fireEngine .10s ease-in infinite;
 	animation-play-state: paused;
 }
 main > section:nth-of-type(1) ul li:nth-of-type(4){
-	height: 4em;
+	height: clamp(3rem, 8vh, 35rem);
 	width: 4em;
 	background-color: lightyellow;
 	animation: fireEngine .15s ease-in infinite;
@@ -318,7 +304,7 @@ main > ul:nth-of-type(2) li:nth-of-type(7) {
 	position: absolute;
 	left: calc(65% - 2.5em);
 	bottom: -16.5em;
-	animation: babyFirework 1.375s 6 .5s ease-in;
+	animation: babyFirework 1.375s 6 .5s ease-in-out;
 	animation-play-state: paused;
 }
 @keyframes firework {
@@ -360,10 +346,10 @@ main > ul:nth-of-type(2) li:nth-of-type(7) {
 }
 @keyframes achtergrond {
 	0% {
-		background-position: 90vh bottom;
+		background-position: 0vw bottom;
 	}
 	77% {
-		background-position: calc(120vh - 30em) bottom;
+		background-position: -20vw bottom;
 	}
 	84% {
 		opacity: 1;
@@ -389,10 +375,10 @@ main > ul:nth-of-type(2) li:nth-of-type(7) {
 }
 @keyframes achtergrond2 {
 	0% {
-		background-position: 100vh bottom;
+		background-position: 0vw bottom;
 	}
 	77% {
-		background-position: calc(100vh - 30em) bottom;
+		background-position: -40vw bottom;
 	}
 	84% {
 		opacity: 1;
@@ -418,10 +404,10 @@ main > ul:nth-of-type(2) li:nth-of-type(7) {
 }
 @keyframes achtergrond3 {
 	0% {
-		background-position: 120vh bottom;
+		background-position: -10vw bottom;
 	}
 	77% {
-		background-position: calc(90vh - 40em) bottom;
+		background-position: -70vw bottom;
 	}
 	84% {
 		opacity: 1;
@@ -482,17 +468,38 @@ main > ul:nth-of-type(2) li:nth-of-type(7) {
 @keyframes babyFirework {
 	0% {
 		visibility: visible;
-		transform: scale(.2);
+		transform: scale(.3);
 	}
-	85% {
-		transform: scale(.2);
-		filter: hue-rotate(10000000000000000000000000000000000deg);	
+	80% {
+		transform: scale(.3);
+		filter: hue-rotate(10000000000000000000000deg);
 	}
 	100% {
-		transform: scale(8);
-		visibility: hidden;
-		bottom: 25em;
-		transform: scale(1) rotate3d(1, 1, 0, -360deg);
-		filter: blur(1.5em);	
+		bottom: 25vh;
+		transform: scale(1.5) rotate3d(1, 1, 0, -360deg);
+		filter: hue-rotate(10000000000000000000000000000000000deg) blur(1em);	
 	}
 }
+@media only screen and (max-width: 900px) {
+	main h1 {
+	  display: none;
+	}
+	main > label:not(label:nth-of-type(1)) {
+		left: calc(var(--button-positie-left));
+	}
+	main > label[for="raket-k2"] {
+		top: calc(var(--button-positie-top) + 7vh);
+	}
+	main > label[for="raket-k3"] {
+		top: calc(var(--button-positie-top) + 14vh);
+	}
+	main > label[for="raket-k4"] {
+		top: calc(var(--button-positie-top) + 21vh);
+	}
+	main > label[for="raket-k5"] {
+		top: calc(var(--button-positie-top) + 28vh);
+	}
+	main > label[for="raket-k6"] {
+		top: calc(var(--button-positie-top) + 35vh);
+	}
+  }
