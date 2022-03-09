@@ -10,7 +10,7 @@ border-left: 5em solid transparent;
 border-right: 5em solid transparent;
 border-bottom: 5em solid black;
 ``` 
-You can create triangles like this, but it will be hard to make them move. That's when I found out that you can also create triangles with a ``` conic-gradient. ``` This in combination with keyframes, made it possible to make my background move. The next step was to create the firework and make it interactive.
+You can create triangles like this, but it will be hard to make them move. That's when I found out that you can also create triangles with a ``` conic-gradient. ``` This in combination with ```keyframes```, made it possible to make my background move. The next step was to create the firework and make it interactive.
 
 <img width="1128" alt="image" src="https://user-images.githubusercontent.com/74137185/157466593-a2e5d1f4-4b40-4be2-b417-0a2a33bd1e2e.png">
 Image of my first attempt of the mountain.
@@ -37,5 +37,3 @@ These are images of the final result.
 3. [https://cssgradient.io/](https://cssgradient.io/)
 
 4. [https://9elements.github.io/fancy-border-radius/](https://9elements.github.io/fancy-border-radius/)
-
-
