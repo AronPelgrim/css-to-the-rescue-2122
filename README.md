@@ -15,6 +15,7 @@ You can create triangles like this, but it will be hard to make them move. That'
 <img width="1128" alt="image" src="https://user-images.githubusercontent.com/74137185/157466593-a2e5d1f4-4b40-4be2-b417-0a2a33bd1e2e.png">
 Image of my first attempt of the mountain.
 
+
 <img width="1128" alt="image" src="https://user-images.githubusercontent.com/74137185/157468741-f08c6e98-14c2-4144-8f8e-9bab117dc9ac.png">
 Image of the added green moving mountains, created with conic-gradient.
 
