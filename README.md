@@ -21,3 +21,6 @@ Image of the added green moving mountains, created with conic-gradient.
 
 ### Week 2
 In this week, I focused mainly on animating the firework bomb. At first my idea was to connect two animations two the firework bomb. This was a dumb idea, because I forgot that you can't connect two animations to one element. The solution was simple, creating one long animation. Another problem I ran into was that the ```animation-iteration-count``` only worked on infinite. After some frustration, I found out that the 0% in the animation had to contain code for the animation to work. I also added a fire-engine to the bomb and also an explosion with a delay that activates when the bomb drops. A small styling issue was that the mountains didn't move properly. The closer mountains moved slower then the further mountains and this perception isn't right, it's the other way around. So I changed this.
+
+### Week 3
+In this final week, I got a lot done. I made the page interactive with ```input type="radio"``` and ```input type="checkbox"```. I styled these inputs with labels. This way, you can select the colors of the rocket and activate the animation.
