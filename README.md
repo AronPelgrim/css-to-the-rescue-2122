@@ -30,5 +30,6 @@ In this final week, I got a lot done. I made the page interactive with ```input 
 These are images of the final result.
 
 ### Bronnen
-[https://redstapler.co/easy-realistic-css-fire-effect/](https://redstapler.co/easy-realistic-css-fire-effect/)
-[https://codepen.io/shooft/pen/QWOaMjJ](https://codepen.io/shooft/pen/QWOaMjJ)
+1. [https://redstapler.co/easy-realistic-css-fire-effect/](https://redstapler.co/easy-realistic-css-fire-effect/)
+
+2. [https://codepen.io/shooft/pen/QWOaMjJ](https://codepen.io/shooft/pen/QWOaMjJ)
