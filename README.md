@@ -28,3 +28,7 @@ In this final week, I got a lot done. I made the page interactive with ```input 
 <img width="1128" alt="image" src="https://user-images.githubusercontent.com/74137185/157473717-dd1d2439-1ecb-469b-a553-0080c7bb2132.png">
 <img width="1127" alt="image" src="https://user-images.githubusercontent.com/74137185/157474565-9448b1fc-c146-4b22-a1d6-38a6dfbc1ce7.png">
 These are images of the final result.
+
+### Bronnen
+[https://redstapler.co/easy-realistic-css-fire-effect/](https://redstapler.co/easy-realistic-css-fire-effect/)
+[https://codepen.io/shooft/pen/QWOaMjJ](https://codepen.io/shooft/pen/QWOaMjJ)
