@@ -1,3 +1,4 @@
+/* Section van de raket */
 main > section:nth-of-type(1) {
 	position: absolute;
 	width: clamp(13rem, 20vw, 18rem); 
@@ -20,6 +21,7 @@ main > section:nth-of-type(1)::before {
 	left: 0;
 	z-index: 20;
 }
+/* List van vuur uit de raket */
 main > section:nth-of-type(1) ul{
 	position: relative;
 	transform: rotate(220deg);

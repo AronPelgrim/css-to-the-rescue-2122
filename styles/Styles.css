@@ -31,6 +31,7 @@ main ul li {
 main > ul:nth-of-type(2) li {
 	visibility: hidden;
 }
+/* responsiveness voor de controls */
 @media only screen and (max-width: 900px) {
 	main h1 {
 	  display: none;
