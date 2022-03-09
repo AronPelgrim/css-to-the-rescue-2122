@@ -1,0 +1,119 @@
+main > section:nth-of-type(1) {
+	position: absolute;
+	width: clamp(13rem, 20vw, 18rem); 
+	height: clamp(4rem, 13vh, 35rem);
+	background: var(--raket-kleur);
+	top: 30vh;
+	left: calc(50% - 11vw);
+	border-radius: 0% 70% 60% 0% / 70% 70%;
+	animation: rocket 10s 1 ease-in-out;
+	animation-play-state: paused;
+	visibility: hidden;
+	transition: .5s;
+}
+main > section:nth-of-type(1)::before {
+	position: absolute;
+	content: "";
+	background-color: var(--raket-kleur-achter);
+	height: clamp(4rem, 13vh, 35rem);
+	width: 2em;
+	left: 0;
+	z-index: 20;
+}
+main > section:nth-of-type(1) ul{
+	position: relative;
+	transform: rotate(220deg);
+	transform-origin: 4em;
+}
+/* Geinspireerd door; https://redstapler.co/easy-realistic-css-fire-effect/ */
+main > section:nth-of-type(1) ul li{
+	position: absolute;
+	bottom: 4em;
+	left: 4em;
+	border-radius: 50% 0 50% 0;
+}
+main > section:nth-of-type(1) ul li:nth-of-type(1){
+	height: clamp(5rem, 14vh, 35rem);
+	width: 7em;
+	background-color: orangered;
+	animation: fireEngine .15s ease-in infinite;
+	animation-play-state: paused;
+}
+main > section:nth-of-type(1) ul li:nth-of-type(2){
+	height: clamp(4rem, 12vh, 35rem);
+	width: 6em;
+	background-color: orange;
+	animation: fireEngine .20s ease-in infinite;
+	animation-play-state: paused;
+}
+main > section:nth-of-type(1) ul li:nth-of-type(3){
+	height: clamp(3rem, 10vh, 35rem);
+	width: 5em;
+	background-color: gold;
+	animation: fireEngine .10s ease-in infinite;
+	animation-play-state: paused;
+}
+main > section:nth-of-type(1) ul li:nth-of-type(4){
+	height: clamp(3rem, 8vh, 35rem);
+	width: 4em;
+	background-color: lightyellow;
+	animation: fireEngine .15s ease-in infinite;
+	animation-play-state: paused;
+}
+@keyframes rocket {
+	0% {
+		visibility: visible;
+		transform: translatey(0em);
+	}
+	10% {
+		transform: translatey(6em);
+	}
+	20% {
+		transform: translatey(0);
+	}
+	30% {
+		transform: translatey(6em);
+	}
+	40% {
+		transform: translatey(0);
+	}
+	50% {
+		transform: translatey(6em);
+	}
+	60% {
+		transform: translatey(0);
+	}
+	70% {
+		transform: translatey(6em);
+	}
+	80% {
+		transform: translatey(0);
+	}
+	92% {
+		transform: rotate(180deg) translatey(-100vh);
+	}
+	100% {
+		transform: rotate(180deg) translatey(-100vh);
+		visibility: hidden;
+	}
+}
+@keyframes fireEngine {
+	0% {
+		transform: rotate(1deg);
+	}
+	20% {
+		transform: rotate(0deg) scaleY(1.05);
+	}
+	40% {
+		transform: rotate(1deg);
+	}
+	40% {
+		transform: rotate(0deg);
+	}
+	80% {
+		transform: rotate(1deg) scalex(0.90);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
